@@ -1,4 +1,5 @@
 #actually this sucks.
+#use like python postscrape.py NVDA 1
 import json
 import sys
 import os
@@ -235,7 +236,7 @@ def build_thesis_context(ticker):
 
     return "\n".join(lines)
 
-def generate_market_thesis(ticker):
+def generate_market_thesis(ticker): #recommend not using this feature
 
     context = (
         build_thesis_context(ticker)
@@ -367,7 +368,7 @@ def analyze_ticker(ticker):
 
 if __name__ == "__main__":
     # sys.argv = ["script.py", "NVDA", "1"]
-    # e.g. python AnalyzeTicker.py NVDA 1
+    # e.g. python postscrape.py NVDA 1
 
     if len(sys.argv) < 3:
         print("Usage: python script.py <TICKER> <RUN_FLAG>")
